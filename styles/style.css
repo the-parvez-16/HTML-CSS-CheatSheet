@@ -1,0 +1,136 @@
+body::-webkit-scrollbar {
+    height: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--bg);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--bg1);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--bg3);
+}
+
+:root {
+    --bg: #f1f1f1;
+    --bg1: #888;
+    --bg3: #555;
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --card-background: #fff;
+    --card-border: #e0e0e0;
+    --card-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    --code-bg: #f0f0f0;
+}
+
+.theme {
+    --bg: #1e1e1e;
+    --bg1: #a6a6a6;
+    --bg3: aliceblue;
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #1e1e1e;
+    --text-color: #fff;
+    --card-background: #2a2a2a;
+    --code-bg: #444;
+    --card-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    --hover-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#theme {
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 4% 0;
+    box-shadow: var(--card-shadow);
+    transition: box-shadow 0.3s ease;
+}
+
+.cardin {
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5%;
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card h3 {
+    color: var(--secondary-color);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+
+}
+
+pre {
+    background: var(--code-bg);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.card ul {
+    list-style-type: none;
+    padding-left: 1rem;
+    overflow-x: auto;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+}
+
+.card code {
+    background-color: var(--code-bg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.attribute {
+    color: #e74c3c;
+}

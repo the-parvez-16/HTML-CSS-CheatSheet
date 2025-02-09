@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Cheatsheet</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+</head>
+
+<body class="container-fluid">
+    <header>
+        <h1>Frontend Cheatsheet</h1>
+        <button id="theme">🌙 Dark Mode</button>
+    </header>
+    <section>
+        <main class="container">
+            <div class="card">
+                <h2>HTML Basics</h2>
+                <div class="cardin">
+                    <h3>Document Structure</h3>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html<span class="attribute"> lang="en"</span>&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body <span class="attribute">bg-color="relative-path" text="black" alink="red" vlink="purple" link="blue"</span>&gt;
+        &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                </div>
+                <div class="cardin">
+                    <h3>Metadata</h3>
+                    <ul>
+                        <li><code>&lt;meta <span class="attribute">charset="UTF-8"</span>&gt;</code></li>
+                        <li><code>&lt;meta <span class="attribute">name="viewport" content="width=device-width, initial-scale=1.0"</span>&gt;</code>
+                        </li>
+                        <li><code>&lt;title&gt;</code></li>
+                        <li><code>&lt;link <span class="attribute">rel="relationwithdoc" href="pathof" type="MIME"</span>&gt;</code></li>
+                        <li><code>&lt;script <span class="attribute">src="path"</span>&gt;</code> - for script</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <h2>HTML5 Semantic Elements</h2>
+                <ul>
+                    <li><code>&lt;header&gt;</code> , <code>&lt;footer&gt;</code> , <code>&lt;section&gt;</code></li>
+                    <li><code>&lt;main&gt;</code> , <code>&lt;nav&gt;</code> , <code>&lt;article&gt;</code></li>
+                    <li><code>&lt;figure&gt;</code> , <code>&lt;figcaption&gt;</code> , <code>&lt;dialog <span class="attribute">open=""</span>&gt;</code></li>
+                    <li><code>&lt;aside&gt;</code> , <code>&lt;div&gt;</code> , <code>&lt;span&gt;</code></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>Semantics for body</h2>
+                <div class="cardin">
+                    <h3>Text Elements</h3>
+                    <ul>
+                        <li><code>&lt;br&gt;</code> - Line break</li>
+                        <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> - Headings</li>
+                        <li><code>&lt;p <span class="attribute">align="left|right|center"</span>&gt;</code> - Paragraph</li>
+                        <li><code>&lt;strong&gt;</code> - for bold(used by senior devlopers)
+                        alternative : <code>&lt;b&gt;</code></li>
+                        <li><code>&lt;em&gt;</code> - Emphasize</li>
+                        <li><code style="word-spacing: -10px;">& nbsp;</code> - Blanck space raw text element</li>
+                        <li><code>&lt;a <span class="attribute">href="url" target="_blank"</span>&gt;</code> - Link(anchor) setter</li>
+                        <li><code>&lt;img <span class="attribute">src="image.jpg" alt="description" title="onhovertxt" align="l|r"</span>&gt;</code> - Images getter</li>
+                    </ul>
+                </div>
+                <div class="cardin">
+                    <h3>Code snippet Elements</h3>
+                    <ul>
+                        <li><code>&lt;code&gt;</code> - code snippet</li>
+                        <li><code>&lt;pre&gt;</code> - preserve space</li>
+                        <li><code>&lt;var&gt;</code> - for code snippet variables</li>
+                        <li><code>&lt;samp&gt;</code> - comment and captions</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Extra Elements</h2>
+                <ul>
+                    <li><code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> - for expand and collapse</li>
+                    <li><code>&lt;feildset&gt;</code> and <code>&lt;legend&gt;</code> - frame with head</li>
+                    <li><code><small>&lt;small&gt;</small></code> and <code><big>&lt;big&gt;</big></code></li>
+                    <li><code>&lt;blockquote&gt;</code> - similar to paragraph but have left and right identation</li>
+                </ul>
+                <div class="cardin">
+                    <h3>Multimedia Elements</h3>
+                    <ul>
+                        <li><code>&lt;marquee <span class="attribute">behavior="" direction="left/right/up/dowm" scrollamount="100" onmouseenter="stop()" onmouseout="start()"</span>&gt;</code> - for moving</li>
+                        <li><code>&lt;audio&gt;</code> - for audio</li>
+                        <li><code>&lt;video <span class="attribute">src="" autoplay loop controls</span>&gt;</code> - for video</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <h2>HTML Lists & Tables</h2>
+
+                <div class="cardin">
+                    <h3>Lists</h3>
+                    <ul>
+                        <li><code>&lt;ul&gt;</code></li>
+                        <li><code>&lt;ol <span class="attribute">type="1|a|A|i|I"</span>&gt;</code></li>
+                        <li><code>&lt;li&gt;</code></li>
+                        <li><code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code></li>
+                    </ul>
+                </div>
+                <div class="cardin">
+                    <h3>Tables</h3>
+                    <ul>
+                        <li><code>&lt;table <span class="attribute"> cellspacing="" cellpadding="" frame="" border="5" rules="" bgcolor="" background=""</span>&gt;</code> - main</li>
+                        <li><code>&lt;caption&gt;</code> - for robots</li>
+                        <li><code>&lt;thead&gt;</code> - table header</li>
+                        <li><code>&lt;th <span class="attribute">colspan="2" rowspan="2"</span>&gt;</code> - table heading(width)</li>
+                        <li><code>&lt;tbody&gt;</code> - table body</li>
+                        <li><code>&lt;tr&gt;</code> - table row (heigth)</li>
+                        <li><code>&lt;td <span class="attribute">colspan="2" rowspan="2"</span>&gt;</code> - table data(width)</li>
+                        <li><code>&lt;tfoot&gt;</code> - table footer</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <h2>HTML Forms</h2>
+                <div class="cardin">
+                    <h3>Form Elements</h3>
+                    <ul>
+                        <li><code>&lt;form <span class="attribute">action="/submit" method="post/get"</span>&gt;</code></li>
+                        <li><code>&lt;label <span class="attribute">for="input-id"</span>&gt;</code></li>
+                        <li><code>&lt;input <span class="attribute">type="text|password|email|number|checkbox|radio" name="field" required</span>&gt;</code>
+                        </li>
+                        <li><code>&lt;textarea <span class="attribute">name="message" rows="4" cols="50"</span>&gt;</code>
+                        </li>
+                        <li><code>&lt;select <span class="attribute">name="choice"</span>&gt;</code></li>
+                        <li><code>&lt;optgroup&gt;</code></li>
+                        <li><code>&lt;option <span class="attribute">value="option1"</span>&gt;</code></li>
+                        <li><code>&lt;datalist&gt;</code></li>
+                        <li><code>&lt;meter&gt;</code></li>
+                        <li><code>&lt;progress&gt;</code></li>
+                        <li><code>&lt;button <span class="attribute">type="submit|reset|button"</span>&gt;</code></li>
+                    </ul>
+                </div>
+                <div class="cardin">
+                    <h3>Attributes</h3>
+                    <ul>
+                        <li>
+                            <strong>populating a page with values from server</strong>
+                            <ul>
+                                <li><code class="attribute">value</code></li>
+                                <li><code class="attribute">readonly</code></li>
+                                <li><code class="attribute">disabled</code></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>populating a empty page for the user for type</strong>
+                            <ul>
+                                <li><code class="attribute">required</code> , <code class="attribute">autofocus</code> , <code class="attribute">placeholder</code></li>
+                                <li><code class="attribute">maxlength</code> , <code class="attribute">minlength</code></li>
+                                <li><code class="attribute">list</code> , <code class="attribute">size</code></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Extra Attributes</strong>
+                            <ul>
+                                <li><code class="attribute">pattern</code></li>
+                                <li><code class="attribute">min</code> , <code class="attribute">max</code></li>
+                                <li><code class="attribute">multiple</code> , <code class="attribute">accept=".jpg,.png"</code> - for files</li>
+                                <li><code class="attribute">checked</code> - for radio and checkbox</li>
+                                <li><code class="attribute">low</code> , <code class="attribute">high</code> - for meter element</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>CSS Selectors</h2>
+                <ul style="list-style-type:lower-greek;">
+                    <li><code>element</code> , <code>.class</code> , <code>#id</code> , <code>element, element</code> - Primary selectors</li>
+                    <li><code>element childall</code> , <code>element &gt; child</code> , <code>element + adjacent</code> , <code>element ~ adjacentall</code> - Rational Selectors</li>
+                    <li><code>[attribute]</code> , <code>[attribute="value"]</code> , <code>element[attribbute="value"]</code> - attribute selector</li>
+                    <li><code>:hover</code>, <code>:active</code>, <code>:focus</code> - dynamic pseudo classes</li>
+                    <li><code>:first-child</code> , <code>:last-child</code> , <code>:nth-child(levelnumber)</code> , <code>:nth-of-type(levelnumber[n])</code> - Structural pseudo classes</li>
+                    <li><code>:enabled</code> , <code>:disabled</code> , <code>:read-only</code> , <code>:checked</code> , <code>:focus</code> - element state pseudo classes</li>
+                    <li><code>:valid</code> , <code>:invalid</code> , <code>:required</code> , <code>:optional</code> - validation state pseudo classes</li>
+                    <li><code>::first-line</code> , <code>::first-letter</code> , <code>::before</code> , <code>::after</code> , <code>::placeholder</code> , <code>::selection</code> - behavioural & occurence classes</li>
+                    <li><code>*</code> - Universal selector</li>
+                    <li><code>:lang(en)</code> - language selector</li>
+                    <li><code>:root</code> - root selector</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>CSS Box Model</h2>
+                <ul style="list-style: lower-greek;">
+                    <li><code>margin: top right bottom left;</code></li>
+                    <li><code>border: width style color;</code></li>
+                    <li><code>padding: top right bottom left;</code></li>
+                    <li><code>width: value;</code></li>
+                    <li><code>height: value;</code></li>
+                    <li><code>background-color:rgba/hex/colorName/hsla;</code></li>
+                    <li><code>box-shadow/text-shadow: horizontal vertical blur color</code></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>CSS display flex</h2>
+                <h3>Container Properties</h3>
+                <ul>
+                    <li><code>display: flex;</code></li>
+                    <li><code>flex-direction: row | column;</code></li>
+                    <li><code>justify-content: flex-start | center | flex-end | space-between | space-around;</code>
+                    </li>
+                    <li><code>align-items: stretch | flex-start | center | flex-end | baseline;</code></li>
+                </ul>
+                <h3>Item Properties</h3>
+                <ul>
+                    <li><code>flex-grow: number;</code></li>
+                    <li><code>flex-shrink: number;</code></li>
+                    <li><code>flex-basis: length | auto;</code></li>
+                    <li><code>align-self: auto | flex-start | center | flex-end | baseline | stretch;</code></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>CSS display grid</h2>
+                <div class="cardin">
+                    <h3>Container Properties</h3>
+                    <ul>
+                        <li><code>display: grid;</code></li>
+                        <li><code>grid-template-columns: 100px 1fr;</code></li>
+                        <li><code>grid-template-rows: auto 100px 1fr;</code></li>
+                        <li><code>gap: 10px;</code></li>
+                    </ul>
+                </div>
+                <div class="cardin">
+                    <h3>Item Properties</h3>
+                    <ul>
+                        <li><code>grid-column: 1 / 3;</code></li>
+                        <li><code>grid-row: ;</code></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <h2>CSS Remaining</h2>
+                <div class="cardin">
+                    <h3>CSS position</h3>
+                    <ul>
+                        <li><code>position : static(default) | relative | absolute | fixed | sticky;</code></li>
+                    </ul>
+                </div>
+                <div class="cardin">
+                    <h3>CSS animation</h3>
+                    <ul style="list-style-type: lower-greek;">
+                        <li><code>transfrom:translate() | scale() | skew() | rotate();</code></li>
+                        <li><code>transition: property duration timing-function delay</code></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Responsive Design</h2>
+                <ul>
+                    <li><code>@media screen and (max-width: 600px) { ... }</code></li>
+                    <li><code>max-width: 100%;</code></li>
+                    <li><code>min-width: 320px;</code></li>
+                    <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></li>
+                </ul>
+            </div>
+        </main>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
