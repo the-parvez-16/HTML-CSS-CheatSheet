@@ -65,8 +65,54 @@ header {
     align-items: center;
 }
 
-#theme {
-    height: auto;
+.switch{
+    position: relative;
+    height: 30px;
+    width: 60px;
+}
+input{
+    height: 30px;
+    width: 60px;
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+}
+.dot{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #666;
+    transition: 0.4s;
+    z-index: 0;
+    border-radius: 30px;
+}
+.dot:before{
+    content: "🌙";
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    z-index: 1;
+    border-radius: 50%;
+}
+.mode{
+    position: absolute;
+    z-index: 2;
+}
+
+input:checked+.dot {
+    background-color: #79cbef;
+}
+
+input:checked+.dot:before {
+    transform: translateX(30px);
+    content: "☀️";
 }
 
 h1 {

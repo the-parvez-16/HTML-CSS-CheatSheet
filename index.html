@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Cheatsheet</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="src/styles/style.css">
     <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
 </head>
 
 <body class="container-fluid">
     <header>
         <h1>Frontend Cheatsheet</h1>
-        <button id="theme">🌙 Dark Mode</button>
+        <div class="switch">
+            <input type="checkbox">
+            <span class="dot"></span>
+        </div>
     </header>
     <section>
         <main class="container">
@@ -269,6 +272,6 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="src/scripts/script.js"></script>
 </body>
 </html>

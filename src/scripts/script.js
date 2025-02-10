@@ -1,9 +1,9 @@
 const jsConfetti = new JSConfetti()
 
-document.querySelector("button").addEventListener("click", function () {
+document.querySelector("input").addEventListener("click", function () {
     let body = document.body;
     body.classList.toggle("theme");
-    let theme = document.querySelector("button");
+    let theme = document.querySelector("input");
     if (body.classList.contains("theme")) {
         theme.textContent = "☀️ Light Mode";
     } else {
